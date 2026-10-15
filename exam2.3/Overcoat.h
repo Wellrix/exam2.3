@@ -31,6 +31,21 @@ public:
 
 	void show() const;
 
+	bool operator == (const Overcoat& other) const;
+	bool operator != (const Overcoat& other) const;
+	bool operator > (const Overcoat& other) const;
+	bool operator >= (const Overcoat& other) const;
+	bool operator < (const Overcoat& other) const;
+	bool operator <= (const Overcoat& other) const;
+
+	Overcoat& operator++();
+	Overcoat& operator--();
+
+	Overcoat operator++(int);
+	Overcoat operator--(int);
+
+
+
 	
 
 
