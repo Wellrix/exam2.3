@@ -7,7 +7,7 @@ class Overcoat
 {
 	string name;
 	string type;
-	string size;
+	int size;
 	float price;
 	int num;
 
@@ -15,17 +15,17 @@ class Overcoat
 
 public:
 	Overcoat();
-	Overcoat(string name,string type,string size,float price,int num);
+	Overcoat(string name,string type,int size,float price,int num);
 
 	string getName()const;
 	string getType()const;
-	string getSize()const;
+	int getSize()const;
 	float getPrice()const;
 	int getNum()const;
 
 	void setName(string name);
 	void setType(string type);
-	void setSize(string size);
+	void setSize(int size);
 	void setPrice(float price);
 	void setNum(int num);
 

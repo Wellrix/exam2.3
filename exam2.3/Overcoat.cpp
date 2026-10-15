@@ -1,95 +1,123 @@
 #include "Overcoat.h"
 
+int Overcoat::counter = 0;
+
 Overcoat::Overcoat()
 {
+    name = "NN";
+    type = "None";
+    size = 0;
+    price = 0.0;
+    num = 0;
 }
 
-Overcoat::Overcoat(string name, string type, string size, float price, int num)
+Overcoat::Overcoat(string name, string type, int size, float price, int num)
 {
+    this->name = name;
+    this->type = type;
+    this->size = size;
+    this->price = price;
+    this->num = num;
+
+    
+    
 }
 
 string Overcoat::getName() const
 {
-    return string();
+    return name;
 }
 
 string Overcoat::getType() const
 {
-    return string();
+    return type;
 }
 
-string Overcoat::getSize() const
+int Overcoat::getSize() const
 {
-    return string();
+    return size;
 }
 
 float Overcoat::getPrice() const
 {
-    return 0.0f;
+    return price;
 }
 
 int Overcoat::getNum() const
 {
-    return 0;
+    return num;
 }
 
 void Overcoat::setName(string name)
 {
+    this->name = name;
 }
 
 void Overcoat::setType(string type)
 {
+    this->type = type;
+
 }
 
-void Overcoat::setSize(string size)
+void Overcoat::setSize(int size)
 {
+    this->size = size;
 }
 
 void Overcoat::setPrice(float price)
 {
+    this->price = price;
 }
 
 void Overcoat::setNum(int num)
 {
+    this->num = num;
 }
 
 void Overcoat::show() const
 {
+    cout << "Name: " << name << endl
+        << "Type: " << type << endl
+        << "Size: " << size << endl
+        << "Price: " << price << endl
+        << "Id: " << num << endl;
 }
 
 bool Overcoat::operator==(const Overcoat& other) const
 {
-    return false;
+    return this->type == other.type;
 }
 
 bool Overcoat::operator!=(const Overcoat& other) const
 {
-    return false;
+    return !(*this == other);
 }
 
 bool Overcoat::operator>(const Overcoat& other) const
 {
-    return false;
+    return this->price > other.price;
+
 }
 
 bool Overcoat::operator>=(const Overcoat& other) const
 {
-    return false;
+    return this->price >= other.price;
 }
 
 bool Overcoat::operator<(const Overcoat& other) const
 {
-    return false;
+    return this->price < other.price;
 }
 
 bool Overcoat::operator<=(const Overcoat& other) const
 {
-    return false;
+    return this->price <= other.price;
 }
 
 Overcoat& Overcoat::operator++()
 {
-    // TODO: insert return statement here
+    ++size;
+    return *this;
 }
 
 Overcoat& Overcoat::operator--()
