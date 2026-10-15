@@ -122,25 +122,36 @@ Overcoat& Overcoat::operator++()
 
 Overcoat& Overcoat::operator--()
 {
-    // TODO: insert return statement here
+    if (size > 0) --size;
+    return *this;
 }
 
 Overcoat Overcoat::operator++(int)
 {
-    return Overcoat();
+    Overcoat temp = *this;
+    ++size;
+    return temp;
 }
 
 Overcoat Overcoat::operator--(int)
 {
-    return Overcoat();
+    Overcoat temp = *this;
+    if (size > 0) --size;
+    return temp;
 }
 
 ostream& operator<<(ostream& os, const Overcoat& item)
 {
-    // TODO: insert return statement here
+    os << "ID: " << item.num
+        << " | Name: " << item.name
+        << " | Type: " << item.type
+        << " | Size: " << item.size
+        << " | Price: " << item.price;
+    return os;
 }
 
 istream& operator>>(istream& is, Overcoat& item)
 {
-    // TODO: insert return statement here
+    is >> item.name >> item.type >> item.size >> item.price;
+    return is;
 }
