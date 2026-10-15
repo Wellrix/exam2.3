@@ -44,6 +44,9 @@ public:
 	Overcoat operator++(int);
 	Overcoat operator--(int);
 
+	friend ostream& operator<<(ostream& os, const Overcoat& item);
+	friend istream& operator>>(istream& is, Overcoat& item);
+
 
 
 	
