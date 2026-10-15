@@ -18,5 +18,13 @@
     <ClCompile Include="exam2.3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Overcoat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Overcoat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
