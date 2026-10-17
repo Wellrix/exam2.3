@@ -8,16 +8,18 @@ Overcoat::Overcoat()
     type = "None";
     size = 0;
     price = 0.0;
-    num = 0;
+    counter++;
+    num = counter;
 }
 
-Overcoat::Overcoat(string name, string type, int size, float price, int num)
+Overcoat::Overcoat(string name, string type, int size, float price)
 {
     this->name = name;
     this->type = type;
     this->size = size;
     this->price = price;
-    this->num = num;
+    counter++;
+    num = counter;
 
     
     
@@ -69,10 +71,6 @@ void Overcoat::setPrice(float price)
     this->price = price;
 }
 
-void Overcoat::setNum(int num)
-{
-    this->num = num;
-}
 
 void Overcoat::show() const
 {
