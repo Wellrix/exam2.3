@@ -141,9 +141,11 @@
   <ItemGroup>
     <ClCompile Include="exam2.3.cpp" />
     <ClCompile Include="Overcoat.cpp" />
+    <ClCompile Include="Shop.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Overcoat.h" />
+    <ClInclude Include="Shop.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
