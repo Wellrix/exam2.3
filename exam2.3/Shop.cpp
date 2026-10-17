@@ -11,6 +11,9 @@ void Shop::addOvercoat(const Overcoat& item)
 
 void Shop::removeOvercoat(int index)
 {
+    if (index >= 0 && index < shop.size()) {
+        shop.erase(shop.begin() + index);
+    }
 }
 
 void Shop::changeSize(int index, bool increase)
