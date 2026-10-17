@@ -30,6 +30,11 @@ void Shop::changeSize(int index, bool increase)
 
 void Shop::searchByType(const string type) const
 {
+    for (int i = 0; i < shop.size(); i++) {
+        if (shop[i].getType() == type) {
+            shop[i].show();
+        }
+    }
 }
 
 void Shop::sortByPrice()
