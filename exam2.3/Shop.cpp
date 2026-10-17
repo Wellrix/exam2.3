@@ -18,6 +18,14 @@ void Shop::removeOvercoat(int index)
 
 void Shop::changeSize(int index, bool increase)
 {
+    if (index >= 0 && index < shop.size()) {
+        if (increase) {
+            ++shop[index];
+        }
+        else {
+            --shop[index];
+        }
+    }
 }
 
 void Shop::searchByType(const string type) const
