@@ -6,6 +6,7 @@ Shop::Shop()
 
 void Shop::addOvercoat(const Overcoat& item)
 {
+    shop.push_back(item);
 }
 
 void Shop::removeOvercoat(int index)
