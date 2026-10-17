@@ -39,8 +39,20 @@ void Shop::searchByType(const string type) const
 
 void Shop::sortByPrice()
 {
+    for (int i = 0; i < shop.size(); i++) {
+        for (int j = 0; j < shop.size() - 1; j++) {
+            if (shop[j] > shop[j + 1]) {
+                Overcoat temp = shop[j];
+                shop[j] = shop[j + 1];
+                shop[j + 1] = temp;
+            }
+        }
+    }
 }
 
 void Shop::show() const
 {
+    for (int i = 0; i < shop.size(); i++) {
+        shop[i].show();
+    }
 }
